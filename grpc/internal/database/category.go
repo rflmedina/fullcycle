@@ -63,4 +63,3 @@ func (c *Category) Find(id string) (Category, error) {
 	}
 	return Category{ID: id, Name: name, Description: description}, nil
 }
-Footer

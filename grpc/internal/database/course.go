@@ -72,9 +72,8 @@ func (c *Course) Find(id string) (Course, error) {
 	err := c.db.QueryRow("SELECT name, description, category_id FROM courses WHERE id = $1", id).
 		Scan(&name, &description, &categoryID)
 	if err != nil {
-		
-return Course{}, err
+
+		return Course{}, err
 	}
 	return Course{ID: id, Name: name, Description: description, CategoryID: categoryID}, nil
 }
-Footer
